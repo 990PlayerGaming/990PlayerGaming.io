@@ -9,4 +9,8 @@ function CambiaTema(){
         document.getElementById("bg").style.backgroundColor = "#1E2935"
     }
 }
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    x.classList.toggle("responsive")
+  }
 
