@@ -14,3 +14,27 @@ function myFunction() {
     x.classList.toggle("responsive")
   }
 
+//Temi
+const storageKey = 'theme-preference'
+
+const getColorPreference = () => {
+  if (localStorage.getItem(storageKey))
+    return localStorage.getItem(storageKey)
+  else
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light'
+}
+const setPreference = () => {
+    localStorage.setItem(storageKey, theme.value)
+    reflectPreference()
+}
+
+const reflectPreference = () => {
+document.firstElementChild
+    .setAttribute('data-theme', theme.value)
+
+document
+    .querySelector('#theme-toggle')
+    ?.setAttribute('aria-label', theme.value)
+}
