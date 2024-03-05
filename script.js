@@ -1,15 +1,16 @@
-
+let theme = true
 function CambiaTema(){
-    if(document.getElementById("bg").style.backgroundColor != "white"){
-        document.getElementById("bg").style.backgroundColor = "white"
-        document.getElementsById("majoscritta").style.color = "black"
-        
-        
-    }else{
+    if(theme){
         document.getElementById("bg").style.backgroundColor = "#1E2935"
+        document.getElementsById("majoscritta").style.color = "magenta"
+        theme = false
+    }else{
+        document.getElementById("bg").style.backgroundColor = "magenta"
+        document.getElementById("majoscritta").style.backgroundColor = "Black"
+        theme = true
     }
 }
-function myFunction() {
+function NavBar() {
     var x = document.getElementById("myTopnav");
     x.classList.toggle("responsive")
   }
